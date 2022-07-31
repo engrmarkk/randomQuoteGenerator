@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: black;
+  height: 100vh;
+}
+
+/* the initial visible content container */
+.motivate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+h1 {
+  margin-top: 2rem;
+}
+
+/* styling for all the button */
+button {
+  width: fit-content;
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+/* adding a different styles to the next button */
+.next {
+  background: yellow;
+  padding: 0.5rem 6rem;
+}
+
+.fa-share {
+  font-size: xx-small;
+  margin-left: .2rem;
+}
+
+.tweet a{
+    text-decoration: none;
+    color: white;
+}
+
+ .tweet {
+  transition: 0.7s;
+  border-radius: 1rem;
+  padding: 0.5rem 5.1rem;
+  width: fit-content;
+  background: #1da1f2;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* the button container */
+.myBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p.author {
+  text-align: right;
+  margin-top: 1rem;
+  padding-right: 2rem;
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+/* added class name from javascript file */
+.quotes.active {
+  background: none;
+  border: 1px solid white;
+  color: white;
+}
+
+.next:hover {
+  background: rgb(213, 229, 181);
+}
+
+.display-quote {
+  text-align: center;
+  box-shadow: 2px 4px 8px rgba(55, 54, 54, 0.288);
+  color: white;
+  margin-top: 5rem;
+  display: none;
+  padding: 4rem;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(44, 44, 44, 0.16);
+}
+
+
+
+/* added class name from javascript file */
+.display-quote.active {
+  display: block;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  animation: move 1s ease-in-out backwards;
+  transition: 0.6s;
+  position: relative;
+}
+
+.p-tag.active {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  animation: move 1s ease-in-out backwards;
+  transition: 0.6s;
+}
+
+/* Animation */
+
+@keyframes move {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+
+/* media query */
+
+@media screen and (max-width: 992px) {
+ 
+  .display-quote {
+    width: 80%;
+    padding: 2.5rem 3rem;
+  }
+
+  p.author {
+    text-align: right;
+    padding-right: 0.5rem;
+  }
+}
